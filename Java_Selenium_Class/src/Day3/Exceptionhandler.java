@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package Day3;
 
 public class Exceptionhandler {
 	

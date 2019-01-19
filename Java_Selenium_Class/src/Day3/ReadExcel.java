@@ -1,4 +1,4 @@
-package ExccelOperations;
+package Day3;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,9 +30,9 @@ public class ReadExcel {
 				
 				String CellValue = sh.getRow(i).getCell(j).getStringCellValue();
 				System.out.print(CellValue+"\t");
-			}
+	}
 			System.out.println();
-			
+		
 			
 		}
 		

@@ -1,4 +1,4 @@
-package WriteFile;
+package Day3;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
