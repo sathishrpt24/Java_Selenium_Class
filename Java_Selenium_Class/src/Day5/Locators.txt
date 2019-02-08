@@ -1,0 +1,97 @@
+Element Locating Methods:
+
+	--> Id
+	--> Tag name
+	--> Link Text
+	--> partial Link text
+	--> Xpath
+	--> CSS Selectors
+	--> Class
+	--> Name
+___________________________________________
+
+Different ways of writing Xpath:
+
+Absoulte Xpath
+	* Direct method
+	
+Relative Xpath
+
+	* Custom Methods
+	
+	Syntax to write Custom Xpath =
+	
+		//tagname[@attribute='value'] or //*[@atribute='value']  - example - //*[@id='header7']
+
+		Advanced Xpath findings:
+		
+			a. Contains() - example - //*[contains(@id,'header7')]
+			b. Starts-with  - example - //*[starts-with(@id,'header7')]  or //*[starts-with(@id,'header')][1]
+			c. text() - example - //tagname[text()='']
+						
+			X-path Axes Methods:
+			
+				Following:
+					//tagname[@attribute='value']//following::input
+				Ancestor - selects all ancestor element that before the current element
+					//tagname[@attribute='value']//ancestor::div
+					
+				Sibiling
+			
+Different Ways of writing CSS Selectors:
+
+--> Using id 				- #id
+		#header1
+		#header7
+--> Using Class				- .classname
+
+--> using single Attribute 	- tagname[attribute='value']
+	
+--> Using Multiple Attibute - tagname[attribute1='value1'][attribute2='value2']
+
+--> contains				- *value  - htmltag[attribute*='']
+	input[value*=oneway]
+--> Starts with				- ^value  - htmltag[attribute^='prefixString']
+--> Endswith				- $value  - htmltag[attribute$='suffixString']
+
+
+**********************
+Absoulte Xpath:
+
+		: /html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]
+		/td/table/tbody/tr/td[2]/table/tbody/tr[5]
+		/td/form/table/tbody/tr[2]/td[1]/font/b
+	
+Contains Methods:-
+
+Xpath: /input[contains(@type,'radio')]
+		//input[contains(@name,'tripType')][2]
+CSS :  input[value*=one]
+
+//form[@name='findflight']//*[text()='Economy class ']
+
+Xpath - //input[starts-with(@value,'oneway')]
+CSS - input[value^=one]
+
+
+Xpath  -  //input[ends-with(@value,'_oneway')]
+
+CSS - input[value$='way']
+
+
+Following:
+
+//input[@value='Business']//following::input - 2 nodes found
+//input[@value='Business']//following::input[@name='servClass']
+
+Ancestor Method:
+
+//input[@value='Business']//ancestor::td[1]//input[@value='Coach']
+
+Following Sibiling:
+
+	//input[@value='Business']//following-sibling::input
+	
+Child:
+
+	//form[@method='post']//following::table/tbody/child::tr
